@@ -1,0 +1,35 @@
+[33mcommit f7e3d6fcd70ddb6fe10bb2025834e1a136f2d621[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: TTaiJin <taeparis980110@gmail.com>
+Date:   Sat Dec 7 17:20:58 2024 +0900
+
+    step3: if add wiseSaying, output wiseSayingNumber
+
+[33mcommit ba3698094f88b8b91b66d7f7723025b3cda9cf14[m
+Author: TTaiJin <taeparis980110@gmail.com>
+Date:   Sat Dec 7 17:07:35 2024 +0900
+
+    step3: if add wiseSaying, output wiseSayingNumber R
+
+[33mcommit dd3a4980970a5436aaf71fc825ad05165075e981[m
+Author: TTaiJin <taeparis980110@gmail.com>
+Date:   Sat Dec 7 17:04:31 2024 +0900
+
+    step2: input content, author G/B
+
+[33mcommit 5015ece8d721c66d109e8b77632a424281852cc2[m
+Author: TTaiJin <taeparis980110@gmail.com>
+Date:   Sat Dec 7 16:52:02 2024 +0900
+
+    step2: input content, author R
+
+[33mcommit e14a5985eb5ef0ae82165630e4565bf6b35f00ec[m
+Author: TTaiJin <taeparis980110@gmail.com>
+Date:   Sat Dec 7 16:35:04 2024 +0900
+
+    1단계: == 명언 앱 == 출력 g/b
+
+[33mcommit 2b9bdfbc46bb3577f8d6de8ce650d106f0ad1561[m
+Author: TTaiJin <taeparis980110@gmail.com>
+Date:   Sat Dec 7 16:32:07 2024 +0900
+
+    1단계: == 명언 앱 == 출력 r
