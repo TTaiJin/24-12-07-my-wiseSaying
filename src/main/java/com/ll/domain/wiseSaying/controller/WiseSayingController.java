@@ -1,5 +1,6 @@
 package com.ll.domain.wiseSaying.controller;
 
+import com.ll.Command;
 import com.ll.domain.wiseSaying.entity.WiseSaying;
 import com.ll.domain.wiseSaying.service.WiseSayingService;
 
@@ -37,12 +38,13 @@ public class WiseSayingController {
                         + wiseSaying.getContent()));
     }
 
-    public void actionDelete(String cmd) {
+    public void actionDelete(Command command) {
         try {
-            int id = Integer.parseInt(cmd.substring(6));
+            int id = command.getActionMapValueAsInt("id");
             boolean removed = wiseSayingService.requireDelete(id);
             if (!removed) {
                 System.out.println(id + "번 명언은 존재하지 않습니다.");
+                return;
             }
             System.out.println(id + "번 명언이 삭제되었습니다.");
         } catch (NumberFormatException e) {
@@ -50,9 +52,9 @@ public class WiseSayingController {
         }
     }
 
-    public void actionModify(String cmd) {
+    public void actionModify(Command command) {
         try {
-            int id = Integer.parseInt(cmd.substring(6));
+            int id = command.getActionMapValueAsInt("id");
             Optional<WiseSaying> opWiseSaying = wiseSayingService.requireFindById(id);
             if (opWiseSaying.isEmpty()) {
                 System.out.println(id + "번 명언은 존재하지 않습니다.");

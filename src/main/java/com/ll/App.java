@@ -22,17 +22,17 @@ public class App {
         while (true) {
             System.out.print("명령) ");
             String cmd = scanner.nextLine();
-            if (cmd.equals("종료")) {
-                systemController.actionExit();
-                break;
-            } else if (cmd.equals("등록")) {
-                wiseSayingController.actionAdd();
-            } else if (cmd.equals("목록")) {
-                wiseSayingController.actionList();
-            } else if (cmd.startsWith("삭제")) {
-                wiseSayingController.actionDelete(cmd);
-            } else if (cmd.startsWith("수정")) {
-                wiseSayingController.actionModify(cmd);;
+            Command command = new Command(cmd);
+            switch (command.getActionName()) {
+                case "종료" -> {
+                    systemController.actionExit();
+                    return;
+                }
+                case "등록" -> wiseSayingController.actionAdd();
+                case "목록" -> wiseSayingController.actionList();
+                case "삭제" -> wiseSayingController.actionDelete(command);
+                case "수정" -> wiseSayingController.actionModify(command);
+                default -> System.out.println("잘못된 명령어입니다.");
             }
         }
     }
