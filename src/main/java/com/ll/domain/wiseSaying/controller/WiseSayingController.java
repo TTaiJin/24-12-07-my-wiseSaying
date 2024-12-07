@@ -40,9 +40,10 @@ public class WiseSayingController {
         try {
             int id = Integer.parseInt(cmd.substring(6));
             boolean removed = wiseSayingService.requireDelete(id);
-            if (removed) {
-                System.out.println(id + "번 명언이 삭제되었습니다.");
+            if (!removed) {
+                System.out.println(id + "번 명언은 존재하지 않습니다.");
             }
+            System.out.println(id + "번 명언이 삭제되었습니다.");
         } catch (NumberFormatException e) {
             System.out.println("명령어가 잘못되었습니다.");
         }
