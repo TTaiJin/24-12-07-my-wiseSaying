@@ -31,6 +31,8 @@ public class App {
                 wiseSayingController.actionList();
             } else if (cmd.startsWith("삭제")) {
                 wiseSayingController.actionDelete(cmd);
+            } else if (cmd.startsWith("수정")) {
+                wiseSayingController.actionModify(cmd);;
             }
         }
     }
