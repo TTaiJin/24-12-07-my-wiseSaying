@@ -24,4 +24,15 @@ public class WiseSayingController {
         WiseSaying wiseSaying = wiseSayingService.requireAdd(content, author);
         System.out.println(wiseSaying.getId() + "번 명언이 등록되었습니다.");
     }
+
+    public void actionList() {
+        System.out.println("번호 / 작가 / 명언");
+        System.out.println("------------------");
+        // wiseSayings 받아와서 역순 정렬 후 출력
+        wiseSayingService.requireList()
+                .reversed()
+                .forEach(wiseSaying -> System.out.println(wiseSaying.getId() + " / "
+                        + wiseSaying.getAuthor() + " / "
+                        + wiseSaying.getContent()));
+    }
 }

@@ -22,4 +22,8 @@ public class WiseSayingRepository {
         }
         return wiseSaying;
     }
+
+    public List<WiseSaying> findAll() {
+        return wiseSayings;
+    }
 }
