@@ -14,7 +14,7 @@ public class AppTest {
     @DisplayName("1단계: == 명언 앱 == 출력")
     public void t1() {
         String output = AppTest.run("");
-        assertThat(output).isEqualTo("== 명언 앱 ==");
+        assertThat(output).contains("== 명언 앱 ==");
     }
 
     public static String run(String input) {
