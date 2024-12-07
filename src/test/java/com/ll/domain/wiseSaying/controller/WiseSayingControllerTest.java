@@ -68,4 +68,21 @@ public class WiseSayingControllerTest {
                 .contains("2 / 작자미상 / 과거에 집착하지 마라.")
                 .contains("3 / 작자미상 / 실패는 성공의 어머니다.");
     }
+
+    @Test
+    @DisplayName("6단계: 1번 명언삭제")
+    public void t6() {
+        String output = AppTest.run("""
+                등록
+                현재를 사랑하라.
+                작자미상
+                등록
+                과거에 집착하지 마라.
+                작자미상
+                목록
+                삭제?id=1
+                """);
+
+        assertThat(output).contains("1번 명언이 삭제되었습니다.");
+    }
 }
