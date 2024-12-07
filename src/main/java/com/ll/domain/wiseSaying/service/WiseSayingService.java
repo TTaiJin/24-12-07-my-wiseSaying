@@ -19,4 +19,8 @@ public class WiseSayingService {
     public List<WiseSaying> requireList() {
         return wiseSayingRepository.findAll();
     }
+
+    public boolean requireDelete(int id) {
+        return wiseSayingRepository.delete(id);
+    }
 }
